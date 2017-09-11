@@ -1,0 +1,156 @@
+@font-face {
+  font-family: fuentepro;
+  src: local("Dancing Script OT");
+
+}
+
+.cabecera{
+  display: flex;
+  flex-direction: row;
+  background-color: #5b7989;
+  color:white;
+  text-shadow: 2px #02010a;
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.encabezado{
+  width: 50%;
+
+}
+.menup{
+  width: 50%;
+  padding-top: 20px;
+}
+
+body{
+  font-family: fuentepro, Arial, Helvetiva, sans-serif;
+}
+
+nav ul{
+  list-style: none;
+  margin: 0 10px 0 10px;
+  padding: 0;
+}
+
+nav ul li{
+  float: right;
+  font-size: 1.5em;
+  margin-right: 10px;
+  text-align: center;
+  text-shadow: 0px 1px 0px;
+}
+
+nav ul li:hover{
+  /*Degradado de fondo*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to( #E3E3E3));/*Chrome y Safari*/
+    background-image: -moz-linear-gradient(top center, #FFF, #E3E3E3);/*Firefox*/
+    background-image: -o-linear-gradient(top, #FFF, #E3E3E3);/*Opera*/
+    background-image: linear-gradient(top, #FFF, #E3E3E3);/*Estandar por defecto*/
+    /*Sombras*/
+    -webkit-box-shadow:  1px -1px 0px #999;/*Chrome y Safari*/
+    -moz-box-shadow:  1px -1px 0px #999;/*Firefox*/
+    -o-box-shadow:  1px -1px 0px #999;/*Opera*/
+    box-shadow:  1px -1px 0px #999;/*Estandar por defecto*/
+    border:1px solid #E3E3E3;
+}
+
+.imagencentral{
+  background-color: #82c3a6;
+  padding: 10px;
+
+}
+
+.imagencentral img{
+display: block;
+margin: 10px auto;
+}
+
+.imagensecundaria{
+  display: flex;
+background-color: #d5c75f;
+}
+
+.imagensecundaria div{
+  flex-direction: row;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+	margin: 10px;
+}
+.imagensecundaria p{
+  padding: -5px;
+  margin-top: -3px;
+}
+
+
+#paisajem:hover{
+  transform: rotate(10deg);
+  box-shadow: #82c3a6;
+  border: 2px solid;
+}
+#retratom:hover{
+  transform: translate(5px, -20px);
+  box-shadow: #82c3a6;
+  border: 2px solid;
+}
+.contenedorf{
+  background-color: #C6d5c5;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.contenedorf div{
+  width: 20%;
+  text-align: center;
+  padding: 1px;
+  margin: 1px;
+}
+
+@media screen and (min-width:600px) {
+
+
+
+}
+
+@media screen and (max-width:599px) {
+.cabecera{
+flex-direction: column;
+  }
+
+.cabecera h2{
+font-size: 115.5% ;
+text-align: center;
+}
+.cabecera li{
+  font-size: 90.5%;
+  float: left;
+}
+.cabecera div{
+  width: 100%;
+}
+
+.imagencentral div{
+  display: inline;
+}
+
+.imagensecundaria {
+  flex-direction: column;
+}
+
+.imagensecundaria div{
+  width: 100%;
+  margin-left: -20px;
+  padding-bottom: 10px;
+}
+
+.contenedorf{
+  flex-direction: column;
+}
+.contenedorf div{
+  width: 100%;
+  font-size: 62.5%;
+}
+
+}
