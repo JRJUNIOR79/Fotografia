@@ -1,7 +1,12 @@
 @font-face {
   font-family: fuentepro;
-  src: local("Dancing Script OT");
-
+  -webkit-font-family:fuentepro;
+  -moz-font-family:fuentepro;
+  src: local("Dancing Script OT"),
+  url("DancingScript.eot") format('embedded-opentype'),
+  url("DancingScript.woff") format('woff'),
+  url("DancingScript.ttf") format('truetype'),
+  url("DancingScript.svg") format('svg');
 }
 
 .cabecera{
@@ -31,6 +36,7 @@ nav ul{
   list-style: none;
   margin: 0 10px 0 10px;
   padding: 0;
+  color: black;
 }
 
 nav ul li{
@@ -39,6 +45,11 @@ nav ul li{
   margin-right: 10px;
   text-align: center;
   text-shadow: 0px 1px 0px;
+
+}
+.link{
+  color: white;
+  text-decoration: none;
 }
 
 nav ul li:hover{
@@ -53,7 +64,10 @@ nav ul li:hover{
     -o-box-shadow:  1px -1px 0px #999;/*Opera*/
     box-shadow:  1px -1px 0px #999;/*Estandar por defecto*/
     border:1px solid #E3E3E3;
+
 }
+
+
 
 .imagencentral{
   background-color: #82c3a6;
@@ -64,6 +78,10 @@ nav ul li:hover{
 .imagencentral img{
 display: block;
 margin: 10px auto;
+-webkit-box-shadow: 2px #02010a;
+-moz-box-shadow: 2px #02010a;
+box-shadow: 1px 1px 1px #02010a;
+border: 2px;
 }
 
 .imagensecundaria{
@@ -75,14 +93,19 @@ background-color: #d5c75f;
   flex-direction: row;
   width: 50%;
   text-align: center;
-  padding: 10px;
+  padding: 10px;-webkit-box-shadow: 2px #02010a;
+  -moz-box-shadow: 2px #02010a;
 	margin: 10px;
 }
 .imagensecundaria p{
   padding: -5px;
   margin-top: -3px;
 }
-
+.imagensecundaria img{
+  -webkit-box-shadow: 2px #02010a;
+  -moz-box-shadow: 2px #02010a;
+  box-shadow: 2px #02010a;
+}
 
 #paisajem:hover{
   transform: rotate(10deg);
@@ -100,6 +123,7 @@ background-color: #d5c75f;
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+  border-radius: 0px 0px 10px 10px;
 }
 .contenedorf div{
   width: 20%;
@@ -108,27 +132,34 @@ background-color: #d5c75f;
   margin: 1px;
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:900px) {
 
 
 
 }
 
-@media screen and (max-width:599px) {
+
+@media screen and (max-width:900px) {
 .cabecera{
 flex-direction: column;
+justify-content: center;
+
   }
 
 .cabecera h2{
 font-size: 115.5% ;
 text-align: center;
+
 }
 .cabecera li{
   font-size: 90.5%;
-  float: left;
+text-align: center;
 }
+
+
 .cabecera div{
   width: 100%;
+
 }
 
 .imagencentral div{
@@ -152,5 +183,33 @@ text-align: center;
   width: 100%;
   font-size: 62.5%;
 }
+
+}
+.contenedor2{
+  display: flex;
+background-color: #d5c75f;
+}
+
+.contenedor2 div{
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  padding: 2px;-webkit-box-shadow: 2px #02010a;
+  -moz-box-shadow: 2px #02010a;
+	margin: 10px;
+}
+#p1:hover{
+  filter: blur(10px);
+}
+.gris:hover{
+  filter: grayscale(100);
+}
+#p3:hover{
+  filter: sepia(90);
+}
+@media screen and (max-width:900px) {
+.contenedor2{
+flex-direction: column;
+  }
 
 }
